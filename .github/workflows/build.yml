@@ -3,8 +3,6 @@ name: Build Explorer11
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -25,8 +23,9 @@ jobs:
     - name: Build standalone executable
       run: dotnet publish -c Release -r win-x64 --self-contained -p:PublishReadyToRun=true
     
-    - name: Upload artifact
+    - name: Upload as Release
       uses: actions/upload-artifact@v4
       with:
-        name: Explorer11-executable
+        name: Explorer11
         path: bin/Release/net6.0-windows/win-x64/publish/Explorer11.exe
+        retention-days: 30
