@@ -13,29 +13,32 @@
         </Grid.RowDefinitions>
 
         <!-- Top Bar -->
-        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" 
-                    Background="White" VerticalAlignment="Center" Padding="10">
-            <Button Name="BackButton" Click="BackButton_Click" Width="40" Height="40" 
-                    Background="#E5E5E5" Foreground="Black" Margin="0,0,5,0" FontSize="18">◀</Button>
-            <Button Name="ForwardButton" Click="ForwardButton_Click" Width="40" Height="40" 
-                    Background="#E5E5E5" Foreground="Black" Margin="0,0,10,0" FontSize="18">▶</Button>
-            <Button Name="HomeButton" Click="HomeButton_Click" Width="40" Height="40" 
-                    Background="#E5E5E5" Foreground="Black" Margin="0,0,5,0" FontSize="18">🏠</Button>
-            <TextBox Name="AddressBar" KeyDown="AddressBar_KeyDown" Padding="10,5" 
-                     VerticalAlignment="Center" Foreground="Black" Background="White" Margin="10,0"/>
-        </StackPanel>
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White" Padding="10">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Button Name="BackButton" Click="BackButton_Click" Width="40" Height="40" 
+                        Background="#E5E5E5" Foreground="Black" Margin="0,0,5,0" FontSize="18">◀</Button>
+                <Button Name="ForwardButton" Click="ForwardButton_Click" Width="40" Height="40" 
+                        Background="#E5E5E5" Foreground="Black" Margin="0,0,10,0" FontSize="18">▶</Button>
+                <Button Name="HomeButton" Click="HomeButton_Click" Width="40" Height="40" 
+                        Background="#E5E5E5" Foreground="Black" Margin="0,0,5,0" FontSize="18">🏠</Button>
+                <TextBox Name="AddressBar" KeyDown="AddressBar_KeyDown" Padding="10,5" 
+                         VerticalAlignment="Center" Foreground="Black" Background="White" Margin="10,0"/>
+            </StackPanel>
+        </Border>
 
         <!-- Sidebar -->
-        <StackPanel Grid.Row="1" Grid.Column="0" Background="White" Padding="10">
-            <Button Click="HomeButton_Click" Content="🏠 Home" Padding="10" Margin="0,5" 
-                    Background="#F0F0F0" Foreground="Black" HorizontalAlignment="Stretch"/>
-            <Button Click="DocumentsButton_Click" Content="📄 Documents" Padding="10" Margin="0,5" 
-                    Background="#F0F0F0" Foreground="Black" HorizontalAlignment="Stretch"/>
-            <Button Click="DownloadsButton_Click" Content="⬇️ Downloads" Padding="10" Margin="0,5" 
-                    Background="#F0F0F0" Foreground="Black" HorizontalAlignment="Stretch"/>
-            <Button Click="PicturesButton_Click" Content="🖼️ Pictures" Padding="10" Margin="0,5" 
-                    Background="#F0F0F0" Foreground="Black" HorizontalAlignment="Stretch"/>
-        </StackPanel>
+        <Border Grid.Row="1" Grid.Column="0" Background="White" Padding="10">
+            <StackPanel>
+                <Button Click="HomeButton_Click" Content="🏠 Home" Padding="10" Margin="0,5" 
+                        Background="#F0F0F0" Foreground="Black" HorizontalAlignment="Stretch"/>
+                <Button Click="DocumentsButton_Click" Content="📄 Documents" Padding="10" Margin="0,5" 
+                        Background="#F0F0F0" Foreground="Black" HorizontalAlignment="Stretch"/>
+                <Button Click="DownloadsButton_Click" Content="⬇️ Downloads" Padding="10" Margin="0,5" 
+                        Background="#F0F0F0" Foreground="Black" HorizontalAlignment="Stretch"/>
+                <Button Click="PicturesButton_Click" Content="🖼️ Pictures" Padding="10" Margin="0,5" 
+                        Background="#F0F0F0" Foreground="Black" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+        </Border>
 
         <!-- File List -->
         <ListBox Name="FileListView" Grid.Row="1" Grid.Column="1" Background="#FAFAFA" 
