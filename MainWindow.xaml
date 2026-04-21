@@ -74,19 +74,21 @@
                         <ListBox Name="FileListView" Background="Transparent" BorderThickness="0">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid Margin="2" Background="#FFFFFF" CornerRadius="6" Padding="8">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="40"/>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="140"/>
-                                        </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="{Binding Icon}" FontSize="20" VerticalAlignment="Center"/>
-                                        <StackPanel Grid.Column="1">
-                                            <TextBlock Text="{Binding Name}" FontWeight="SemiBold"/>
-                                            <TextBlock Text="{Binding Type}" FontSize="11" Foreground="#777"/>
-                                        </StackPanel>
-                                        <TextBlock Grid.Column="2" Text="{Binding Type}" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#999" FontSize="12"/>
-                                    </Grid>
+                                    <Border Margin="2" Background="#FFFFFF" CornerRadius="6" Padding="8">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="40"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="140"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="{Binding Icon}" FontSize="20" VerticalAlignment="Center"/>
+                                            <StackPanel Grid.Column="1">
+                                                <TextBlock Text="{Binding Name}" FontWeight="SemiBold"/>
+                                                <TextBlock Text="{Binding Type}" FontSize="11" Foreground="#777"/>
+                                            </StackPanel>
+                                            <TextBlock Grid.Column="2" Text="{Binding Type}" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#999" FontSize="12"/>
+                                        </Grid>
+                                    </Border>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>
                         </ListBox>
