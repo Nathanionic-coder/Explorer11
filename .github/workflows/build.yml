@@ -23,9 +23,9 @@ jobs:
     - name: Build standalone executable
       run: dotnet publish -c Release -r win-x64 --self-contained -p:PublishReadyToRun=true
     
-    - name: Upload as Release
+    - name: Upload publish folder
       uses: actions/upload-artifact@v4
       with:
-        name: Explorer11
-        path: bin/Release/net6.0-windows/win-x64/publish/Explorer11.exe
+        name: Explorer11-publish-folder
+        path: bin/Release/net6.0-windows/win-x64/publish/**
         retention-days: 30
